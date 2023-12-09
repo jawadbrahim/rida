@@ -128,7 +128,10 @@ def get_group_foods():
 
         grouped_foods[category].append(food_data)
 
-    return {"foods": grouped_foods}
+    response_data = {"foods": grouped_foods}
+    response = json.dumps(response_data, ensure_ascii=False)
+
+    return Response(response, content_type="application/json;")
 
 
 def delete_foods(food_id):

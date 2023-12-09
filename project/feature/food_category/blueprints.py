@@ -28,5 +28,5 @@ def delete_food(food_id):
 @foods_bp.route("/group", methods=["GET"])
 def get_foods_group():
     grouped_foods = get_group_foods()
-    return jsonify(grouped_foods)
+    return (grouped_foods)
 
